@@ -26,9 +26,12 @@ form.addEventListener("submit", (e) => {
     const billValue = parseFloat(billAmount.value);
     if(isNaN (billValue) || billValue <= 0) {
         errorMSG.textContent = "Please enter a valid bill amount.";
-    }
+        resultText.textContent = "";
+    } else {
+        errorMSG.textContent = "";
     const tipAmount = billValue * 0.15;
     resultText.textContent = `Tip Amount: $${tipAmount.toFixed(2)}`;
+    }
 })
 </script>
 </html>
