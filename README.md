@@ -4,7 +4,7 @@ A lightweight, browser-based web application designed to instantly calculate a s
 
 As seen in the source code within `image.png`, the entire application structure and logic are efficiently self-contained within a single file.
 
-🔗 **[Live Demo Hosted on GitHub Pages](https://esther-kentomahun.github.io/bill_calculator_app/)**
+🔗 **Live Demo Hosted on GitHub Pages:** https://esther-kentomahun.github.io/bill_calculator_app/
 
 ---
 
