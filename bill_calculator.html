@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>TIP CALCULATOR</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="container">
+        <form id="tipForm">
+            <label for="billAmount">Bill Amount:</label>
+            <input id="billAmount" type="number">
+            <button type="submit">Calculate</button>
+        </form>
+        <P id="errorMSG"></P>
+        <div id="resultText" class="result"></div>
+    </div>
+</body>
+<script>
+const form = document.getElementById("tipForm");
+const billAmount = document.getElementById("billAmount");
+const errorMSG = document.getElementById("errorMSG");
+const resultText = document.getElementById("resultText");
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const billValue = parseFloat(billAmount.value);
+    if(isNaN (billValue) || billValue <= 0) {
+        errorMSG.textContent = "Please enter a valid bill amount.";
+    }
+    const tipAmount = billValue * 0.15;
+    resultText.textContent = `Tip Amount: $${tipAmount.toFixed(2)}`;
+})
+</script>
+</html>
